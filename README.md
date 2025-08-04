@@ -15,15 +15,25 @@ A frontend PHP website for **Mega Furniture**, designed to showcase a profession
 furniture-frontend
 │
 ├── home.php # Home page
+
 ├── about.php # About page
+
 ├── blog.php # Blog page
+
 ├── contact.php # Contact page
+
 ├── header.php # Shared header with dynamic title
+
 ├── footer.php # Shared footer
+
 │
 ├── assets/ # Static assets (CSS, JS, images)
+
 │ ├── css/
+
 │ ├── js/
+
 │ └── images/
+
 │
 └── README.md # Project documentation
