@@ -1,6 +1,6 @@
-<?php 
+<?php
 $pageTitle = 'New-Arrival';
-include 'inc/header.php' 
+include 'inc/header.php'
 ?>
 
 <!-- NEW ARRIVAL SECTION STARTS FORM HERE  -->
@@ -291,65 +291,67 @@ include 'inc/header.php'
                         <div class="row gx-3 gy-5">
                             <?php foreach ($latestArrival as $product): ?>
                                 <div class="col-md-6 col-xxl-4 new_wrapper">
-                                    <div class="swiper mySwiperInnerImage">
-                                        <div class="swiper-wrapper">
-                                            <?php foreach ($product['images'] as $img) : ?>
-                                                <div class="swiper-slide">
-                                                    <div class="product_img">
-                                                        <div class="wislist_tag">
-                                                            <i class="ri-heart-line"></i>
+                                    <a href="individual-product.php">
+                                        <div class="swiper mySwiperInnerImage">
+                                            <div class="swiper-wrapper">
+                                                <?php foreach ($product['images'] as $img) : ?>
+                                                    <div class="swiper-slide">
+                                                        <div class="product_img">
+                                                            <div class="wislist_tag">
+                                                                <i class="ri-heart-line"></i>
+                                                            </div>
+                                                            <img src="<?= $img ?>" />
                                                         </div>
-                                                        <img src="<?= $img ?>" />
                                                     </div>
-                                                </div>
-                                            <?php endforeach; ?>
+                                                <?php endforeach; ?>
+                                            </div>
+                                            <div class="swiper-button-next d-lg-none">
+                                                <i class="ri-arrow-right-s-line"></i>
+                                            </div>
+                                            <div class="swiper-button-prev d-lg-none">
+                                                <i class="ri-arrow-left-s-line"></i>
+                                            </div>
                                         </div>
-                                        <div class="swiper-button-next d-lg-none">
-                                            <i class="ri-arrow-right-s-line"></i>
-                                        </div>
-                                        <div class="swiper-button-prev d-lg-none">
-                                            <i class="ri-arrow-left-s-line"></i>
-                                        </div>
-                                    </div>
-                                    <div class="product_details_container">
-                                        <h4><?= $product['name'] ?></h4>
-                                        <div class="rating">
-                                            <?php
-                                            $fullStars = floor($product['rating']);
-                                            $halfStar = ($product['rating'] - $fullStars) >= 0.5;
+                                        <div class="product_details_container">
+                                            <h4><?= $product['name'] ?></h4>
+                                            <div class="rating">
+                                                <?php
+                                                $fullStars = floor($product['rating']);
+                                                $halfStar = ($product['rating'] - $fullStars) >= 0.5;
 
-                                            for ($i = 0; $i < $fullStars; $i++) {
-                                                echo '<i class="ri-star-fill"></i>';
-                                            }
-                                            if ($halfStar) {
-                                                echo '<i class="ri-star-half-line"></i>';
-                                            }
-                                            $emptyStars = 5 - $fullStars - ($halfStar ? 1 : 0);
-                                            for ($i = 0; $i < $emptyStars; $i++) {
-                                                echo '<i class="ri-star-line"></i>';
-                                            }
-                                            ?>
-                                        </div>
-                                        <div class="producut_price d-flex align-items-center gap-2">
-                                            <div class="actual_price">
-                                                $55.00
+                                                for ($i = 0; $i < $fullStars; $i++) {
+                                                    echo '<i class="ri-star-fill"></i>';
+                                                }
+                                                if ($halfStar) {
+                                                    echo '<i class="ri-star-half-line"></i>';
+                                                }
+                                                $emptyStars = 5 - $fullStars - ($halfStar ? 1 : 0);
+                                                for ($i = 0; $i < $emptyStars; $i++) {
+                                                    echo '<i class="ri-star-line"></i>';
+                                                }
+                                                ?>
                                             </div>
-                                            $<?= $product['price'] ?>
-                                        </div>
-                                    </div>
-                                    <div thumbsSlider="" class="swiper mySwiperDots">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <div class="prouct_color" style="background-color: #D3C7BF;"></div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="prouct_color" style="background-color: #82BFE3;"></div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="prouct_color" style="background-color: #F2F4F5;"></div>
+                                            <div class="producut_price d-flex align-items-center gap-2">
+                                                <div class="actual_price">
+                                                    $55.00
+                                                </div>
+                                                $<?= $product['price'] ?>
                                             </div>
                                         </div>
-                                    </div>
+                                        <div thumbsSlider="" class="swiper mySwiperDots">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="prouct_color" style="background-color: #D3C7BF;"></div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="prouct_color" style="background-color: #82BFE3;"></div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="prouct_color" style="background-color: #F2F4F5;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
                             <?php endforeach; ?>
                         </div>

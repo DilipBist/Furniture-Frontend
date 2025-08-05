@@ -1,6 +1,6 @@
-<?php 
+<?php
 $pageTitle = 'Home';
-include 'inc/header.php' 
+include 'inc/header.php'
 ?>
 
 
@@ -97,7 +97,10 @@ include 'inc/header.php'
                                     </div>
                                 </div>
                                 <div class="product_details_container">
-                                    <h4><?= $product['name'] ?></h4>
+                                    <a href="individual-product.php">
+                                        <h4><?= $product['name'] ?></h4>
+                                    </a>
+
                                     <div class="rating">
                                         <?php
                                         $fullStars = floor($product['rating']);

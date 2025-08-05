@@ -66,6 +66,7 @@ $(function () {
     // scroll top top btn and navbar fixed on scroll 
     const $scrollTopBtn = $('#Scroll_top');
     const $navbar = $('#fixed_nav');
+    let lastScrollTop = 0;
 
     $(window).on('scroll', function () {
         const scrollTop = $(this).scrollTop();
@@ -74,15 +75,28 @@ $(function () {
 
         if (scrollTop > 160) {
             $navbar.addClass('fixed');
+
+            // Detect scroll direction
+            if (scrollTop > lastScrollTop) {
+                // Scrolling down
+                $navbar.addClass('nav-hidden');
+            } else {
+                // Scrolling up
+                $navbar.removeClass('nav-hidden');
+            }
+
             $scrollTopBtn.addClass('show');
         } else {
-            $navbar.removeClass('fixed');
+            $navbar.removeClass('fixed nav-hidden');
             $scrollTopBtn.removeClass('show');
         }
+
+        lastScrollTop = scrollTop;
 
         // Update progress ring
         $scrollTopBtn.css('--bg', `conic-gradient(var(--primary-color) ${scrolledPercent}%, #ccc ${scrolledPercent}%)`);
     });
+
 
     // Scroll to top on click
     $scrollTopBtn.on('click', function () {
@@ -358,5 +372,35 @@ var mySwiperClient = new Swiper(".mySwiperClient", {
             slidesPerView: 2,
             spaceBetween: 20,
         },
+    },
+});
+
+// individul proudct slider 
+var mySwiperIndividulaProduct = new Swiper(".mySwiperIndividulaProduct", {
+    freeMode: true,
+    watchSlidesProgress: true,
+    // direction: " horizontal",
+    slidesPerView: 4,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    watchSlidesProgress: true,
+    breakpoints: {
+        992: {
+            direction: "vertical",
+            slidesPerView: 5,
+            spaceBetween: 10,
+        }
+    }
+
+});
+
+var mySwiperIndividulaProduct2 = new Swiper(".mySwiperIndividulaProduct2", {
+    spaceBetween: 10,
+
+    thumbs: {
+        swiper: mySwiperIndividulaProduct,
     },
 });

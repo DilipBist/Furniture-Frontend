@@ -1,6 +1,6 @@
-<?php 
+<?php
 $pageTitle = 'Checkout-billing';
-include 'inc/header.php' 
+include 'inc/header.php'
 ?>
 
 

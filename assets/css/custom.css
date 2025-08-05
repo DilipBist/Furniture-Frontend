@@ -489,6 +489,11 @@ HEADER CSS STARTS
     }
 }
 
+/* Add this to hide navbar when scrolling down */
+.nav-hidden {
+    display: none;
+}
+
 .navbar-toggler {
     font-size: 32px;
 }
@@ -2861,13 +2866,13 @@ CART PAGE CSS STARTS
     color: #555555;
 }
 
-.cart_product_information .quantity_input input {
+.quantity_input input {
     height: 35px;
     width: 150px;
     text-align: center;
 }
 
-.cart_product_information .quantity_input button {
+.quantity_input button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -2881,11 +2886,11 @@ CART PAGE CSS STARTS
     width: max-content;
 }
 
-.cart_product_information .quantity_input .decrement {
+.quantity_input .decrement {
     left: 10px;
 }
 
-.cart_product_information .quantity_input .increment {
+.quantity_input .increment {
     right: 10px;
 }
 
@@ -3746,61 +3751,73 @@ CART PAGE CSS ENDS
 
 
 
-.order_history_track_section{
+.order_history_track_section {
     padding: 45px 0;
 }
-.track_image{
+
+.track_image {
     width: 40px;
     height: 40px;
     overflow: hidden;
 }
-.track_image img{
+
+.track_image img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
-.order_history_track_section h3{
+
+.order_history_track_section h3 {
     font-size: clamp(28px, 2.8vw, 38px);
     font-weight: 700;
     margin-bottom: clamp(24px, 3vw, 44px);
 }
-.track_order_box_container h4{
+
+.track_order_box_container h4 {
     font-size: clamp(18px, 1.5vw, 20px);
     font-family: var(--font-family-Roboto);
     font-weight: 700;
     margin: 0;
-    
+
 }
-.track_order_box_container, .track_order_container{
+
+.track_order_box_container,
+.track_order_container {
     padding: clamp(24px, 2vw, 32px);
     background: var(--white-bg);
     box-shadow: 0px 2px 12px 0px #0000000D, 0px -2px 12px 0px #0000000D;
     border-radius: 2px;
 }
-.track_order_box_container i{
+
+.track_order_box_container i {
     font-size: 22px;
 }
-.track_order_container{
+
+.track_order_container {
     color: var(--black01);
 }
-.contact_icons_height{
+
+.contact_icons_height {
     height: 35px;
     width: 35px;
     overflow: hidden;
     display: block;
     margin-bottom: 5px;
 }
-.contact_icons_height img{
+
+.contact_icons_height img {
     height: 100%;
     width: 100%;
     object-fit: contain;
 }
-.w_33{
+
+.w_33 {
     border-right: 1px solid #D9D9D9;
     height: 100%;
     margin: auto;
 }
-.find_order_btn{
+
+.find_order_btn {
     border: none;
     background: var(--primary-color);
     font-size: 16px;
@@ -3810,7 +3827,8 @@ CART PAGE CSS ENDS
     padding: 10px;
     width: 100%;
 }
-.trackorder form button{
+
+.trackorder form button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3821,21 +3839,26 @@ CART PAGE CSS ENDS
     border: 1px solid var(--primary-color);
     transition: all .5s ease-in-out;
 }
-.trackorder form button:hover{
+
+.trackorder form button:hover {
     color: var(--primary-color);
     background-color: transparent;
 }
+
 /* ############# ORDER PAGE CSS ENDS ############## */
 /* 
 ++++++++++++++++++ CHECK OUT PAGE CSS STARTS ++++++++++++++++++ */
-.checkout_section{
+.checkout_section {
     padding: clamp(24px, 3vw, 44px) 0 clamp(44px, 5vw, 84px) 0;
 }
-.checkout_section h2, .checkout_left .ship_payment_form h3{
-        font-size: clamp(28px, 5vw, 38px);
+
+.checkout_section h2,
+.checkout_left .ship_payment_form h3 {
+    font-size: clamp(28px, 5vw, 38px);
     font-weight: 800;
 }
-.checkout_left form input{
+
+.checkout_left form input {
     height: 45px;
     width: 100%;
     padding: 10px;
@@ -3843,11 +3866,14 @@ CART PAGE CSS ENDS
     outline: 0;
     border: 1px solid var(--black00);
 }
-.checkout_left form input[type='checkbox']{
+
+.checkout_left form input[type='checkbox'] {
     height: 20px;
     width: max-content;
 }
-.checkout_left form button, .checkout_left form a{
+
+.checkout_left form button,
+.checkout_left form a {
     height: 45px;
     border: 1px solid var(--primary-color);
     background-color: var(--primary-color);
@@ -3858,22 +3884,28 @@ CART PAGE CSS ENDS
     width: 100%;
     transition: all .5s ease-in-out;
 }
-.checkout_left form button:hover, .checkout_left form a:hover{
+
+.checkout_left form button:hover,
+.checkout_left form a:hover {
     color: var(--primary-color);
     background-color: transparent;
 }
-.checkout_left form{
+
+.checkout_left form {
     color: var(--black01);
 }
-.checkout_right{
+
+.checkout_right {
     padding: 24px;
     background-color: var(--whiteF7);
 }
-.checkout_right h3{
+
+.checkout_right h3 {
     font-size: clamp(20px, 2vw, 26px);
     font-weight: 700;
     font-family: var(--font-family-Roboto);
 }
+
 .checkout_right ul {
     display: flex;
     flex-direction: column;
@@ -3883,73 +3915,87 @@ CART PAGE CSS ENDS
     padding-bottom: 34px;
     margin-bottom: 34px;
 }
-.checkout_right ul li{
+
+.checkout_right ul li {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 16px;
 }
-.checkout_right .left_text{
+
+.checkout_right .left_text {
     color: var(--black01);
-    font-size: clamp(16px, 1.1vw,18px);
+    font-size: clamp(16px, 1.1vw, 18px);
 }
-.checkout_right .right_text{
+
+.checkout_right .right_text {
     color: var(--black00);
     font-weight: 700;
-    font-size: clamp(16px, 1.1vw,18px);
+    font-size: clamp(16px, 1.1vw, 18px);
 }
-.checkout_right .total{
+
+.checkout_right .total {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 16px;
 }
-.checkout_right .total h4{
+
+.checkout_right .total h4 {
     margin: 0;
     font-size: 18px;
     font-weight: 700;
     font-family: var(--font-family-Roboto);
 }
-.checkout_right .total p{
+
+.checkout_right .total p {
     font-size: clamp(18px, 1.5vw, 20px);
     font-weight: 700;
     color: var(--black00);
     margin: 0;
 }
-.shipping_details_list{
+
+.shipping_details_list {
     color: var(--black00);
     border-bottom: 1px solid #767676;
     padding-bottom: 24px;
 }
-.shipping_details_list p{
+
+.shipping_details_list p {
     margin-bottom: 8px;
 }
-.checkout_left .left_heading{
+
+.checkout_left .left_heading {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 16px;
     margin-bottom: 20px;
 }
-.checkout_left .left_heading h3{
+
+.checkout_left .left_heading h3 {
     font-size: clamp(18px, 2vw, 20px);
     font-family: var(--font-family-Roboto);
     font-weight: 700;
 }
-.checkout_left .left_heading a{
+
+.checkout_left .left_heading a {
     color: var(--primary-color);
     text-decoration: underline;
 }
-.checkout_left .ship_payment_form input{
+
+.checkout_left .ship_payment_form input {
     border: 1px solid #A3A3A3;
 }
-.checkout_left .ship_payment_form img{
+
+.checkout_left .ship_payment_form img {
     width: 20px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     right: 10px;
 }
+
 .checkout_left .ship_payment_form .payment_methods img {
     all: unset;
     width: 50px;
@@ -3957,27 +4003,31 @@ CART PAGE CSS ENDS
     object-fit: contain;
 }
 
-.checkout_left .ship_payment_form .payment_methods{
+.checkout_left .ship_payment_form .payment_methods {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 16px;
     flex-wrap: wrap;
 }
-.checkout_left .ship_payment_form .payment_methods > div{
+
+.checkout_left .ship_payment_form .payment_methods>div {
     border: 1px solid #A6A4A4;
     width: 60px;
     height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #525252  ;
+    color: #525252;
     cursor: pointer;
 }
-.checkout_left .ship_payment_form .pay_with_paypal button, .checkout_left .ship_payment_form .pay_with_paypal button img{
+
+.checkout_left .ship_payment_form .pay_with_paypal button,
+.checkout_left .ship_payment_form .pay_with_paypal button img {
     all: unset;
 }
-.checkout_left .ship_payment_form .pay_with_paypal button{
+
+.checkout_left .ship_payment_form .pay_with_paypal button {
     height: 45px;
     width: 100%;
     display: flex;
@@ -3987,17 +4037,363 @@ CART PAGE CSS ENDS
     border: 1px solid var(--primary-color);
     color: var(--black01);
 }
-.checkout_left .ship_payment_form .pay_with_paypal button img{
+
+.checkout_left .ship_payment_form .pay_with_paypal button img {
     width: 80px;
 }
+
 /* 
 ++++++++++++++++++ CHECK OUT PAGE CSS ENDS ++++++++++++++++++ */
+
+
+/* #################################
+INDIVIDUAL PROUDUCT PAGE CSS STARTS
+################################# */
+.individual_prouduct_section {
+    padding: clamp(24px, 3vw, 44px) 0 clamp(44px, 5vw, 84px) 0;
+}
+
+.individual_product_right_side h2 {
+    font-size: clamp(18px, 2.5vw, 26px);
+    font-family: var(--font-family-Roboto);
+    font-weight: 700;
+}
+
+.prouduct_rating {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-size: 24px;
+    color: var(--yellow);
+}
+
+.individual_product_right_side .product_price {
+    font-size: clamp(18px, 2.5vw, 26px);
+    font-family: var(--font-family-Roboto);
+    font-weight: 700;
+}
+
+.product_color_container>p,
+.prouduct_size_container>p {
+    color: #555555;
+}
+
+.product_color_container .colors>div {
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.product_color_container .colors>div:hover,
+.product_color_container .colors>div.active {
+    border: 2px solid var(--white);
+    outline: 1px solid var(--black00);
+}
+
+.prouduct_size_container .sizebox>div {
+    border: 1px solid var(--primary-color);
+    background-color: transparent;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 10px;
+    font-size: clamp(14px, 1vw, 16px);
+}
+
+.prouduct_size_container .sizebox>div.active,
+.prouduct_size_container .sizebox>div:hover {
+    color: var(--white);
+    background-color: var(--primary-color);
+}
+
+.prouduct_size_container .sizebox>div.deactive:hover,
+.prouduct_size_container .sizebox>div.deactive {
+    border-color: #D9D9D9;
+    cursor: not-allowed;
+    background-color: transparent;
+    color: #D9D9D9;
+}
+
+.prouduct_size_container .sizebox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.individual_product_right_side button.add_to_Cart {
+    background-color: var(--primary-color);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    border: 1px solid var(--primary-color);
+    height: 45px;
+    transition: all .5s ease-in-out;
+    font-weight: 500;
+    margin-top: 24px;
+}
+
+.individual_product_right_side button.add_to_Cart:hover {
+    color: var(--primary-color);
+    background-color: transparent;
+}
+
+.individual_product_right_side .quantity_input input {
+    height: 45px;
+    border-radius: 0;
+    border: 1px solid var(--black00);
+}
+
+.individual_product_right_side .wishlist {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 45px;
+    border: 1px solid var(--primary-color);
+    background-color: transparent;
+    color: var(--primary-color);
+    gap: 10px;
+    transition: all .5s ease-in-out;
+    font-weight: 500;
+}
+
+.individual_product_right_side .wishlist:hover {
+    color: var(--white);
+    background-color: var(--primary-color);
+}
+
+.individual_product_right_side .wishlist i,
+.individual_product_right_side button.add_to_Cart i {
+    font-size: 20px;
+}
+
+.about_product_description>div i {
+    font-size: 24px;
+}
+
+.about_product_description>div h6 {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: var(--font-family-Roboto);
+}
+
+.prouct_dimension_img p {
+    color: var(--black01);
+}
+
+.prouct_dimension_img table {
+    width: 100%;
+    border-top: 1px solid var(--whiteE2);
+    border-bottom: 1px solid #A5A5A5;
+}
+
+.individual_product_right_side {
+    border-bottom: 1px solid var(--whiteE2);
+    padding-bottom: 12px;
+}
+
+.prouct_dimension_img table td {
+    width: 50%;
+    padding: 10px;
+    font-size: 14px;
+    border-bottom: 1px solid #A5A5A5;
+    color: var(--black01);
+}
+
+.prouct_dimension_img table td:first-child {
+    background-color: #F1F1F1;
+}
+
+.customer_product_review_Section .sort_item {
+    color: var(--black00);
+    font-size: clamp(22px, 3vw, 38px);
+    font-weight: 700;
+    font-family: var(--font-family-Cormorant);
+}
+
+.review_Summary meter {
+    width: 100%;
+    height: 12px;
+}
+
+/* WebKit browsers (Chrome, Safari) */
+.review_Summary meter::-webkit-meter-bar {
+    background: #eee;
+    border: none;
+}
+
+.review_Summary meter::-webkit-meter-optimum-value {
+    background: var(--yellow);
+    border: none;
+}
+
+.review_Summary meter::-webkit-meter-suboptimum-value {
+    border: none;
+}
+
+.review_Summary meter::-webkit-meter-even-less-good-value {
+    background: var(--yellow);
+}
+
+/* Firefox */
+.review_Summary meter::-moz-meter-bar {
+    border: none;
+    background: var(--yellow);
+}
+
+.customer_product_left_review .rating {
+    color: var(--yellow);
+    font-size: 18px;
+}
+
+.customer_product_left_review .rating span,
+.review_Summary span {
+    color: #555555;
+}
+
+.customer_product_left_review h3 {
+    font-size: clamp(22px, 3vw, 26px);
+    font-family: var(--font-family-Roboto);
+    font-weight: 700;
+    color: var(--black00);
+}
+
+.review_Summary h4 {
+    font-size: clamp(18px, 2vw, 20px);
+    font-weight: 600;
+    font-family: var(--font-family-Roboto);
+    margin-bottom: 24px;
+}
+
+.cusotmer_profile img {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.cusotmer_profile h4 {
+    margin: 0;
+    color: var(--black00);
+    font-family: var(--font-family-Roboto);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.cusotmer_profile .rating {
+    color: var(--yellow);
+}
+
+.review_date {
+    color: #555555;
+}
+
+.reviewed_images>img {
+    width: 120px;
+    object-fit: contain;
+}
+
+.customer_product_review {
+    border-bottom: 1px solid #DADADA;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+}
+
+.customer_product_review p {
+    color: var(--black01);
+}
+
+.customer_product_right>a {
+    color: var(--black00);
+    font-weight: 500;
+    font-size: 14px;
+    width: max-content;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.customer_product_right>a i {
+    font-size: 20px;
+}
+
+.mySwiperIndividulaProduct,
+.mySwiperIndividulaProduct2 {
+    height: 750px;
+    padding: 10px;
+}
+
+
+.mySwiperIndividulaProduct .swiper-wrapper .swiper-slide-thumb-active {
+    border: 2px solid var(--white);
+    outline: 1px solid var(--primary-color);
+}
+
+.mySwiperIndividulaProduct .swiper-wrapper .swiper-slide {
+    width: 100%;
+}
+
+.mySwiperIndividulaProduct2 .swiper-wrapper .swiper-slide {
+    height: 100%;
+    width: 100%;
+}
+
+.mySwiperIndividulaProduct img,
+.mySwiperIndividulaProduct2 img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.mySwiperIndividulaProduct .swiper-button-next {
+    top: auto !important;
+    left: 42%;
+    transform: rotate(90deg);
+    bottom: 5px;
+}
+
+.mySwiperIndividulaProduct .swiper-button-prev {
+    top: 25px;
+    transform: rotate(90deg);
+    left: 42%;
+}
+
+.individual_product_left {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* #################################
+INDIVIDUAL PROUDUCT PAGE CSS ENDS
+################################# */
 
 
 /* ===================================
 MEDIA QUERIES FOR RESPONISVENESS 
 =================================== */
 /* Extra large devices (desktops, less than 1200px) */
+@media (max-width: 1400px) {
+
+    .mySwiperIndividulaProduct,
+    .mySwiperIndividulaProduct2 {
+        height: 600px;
+        padding: 10px;
+    }
+
+    .mySwiperIndividulaProduct .swiper-wrapper .swiper-slide {
+        width: 100%;
+    }
+}
+
 @media (max-width: 1200px) {
     .header_discount_tag_div p {
         display: none;
@@ -4126,6 +4522,8 @@ MEDIA QUERIES FOR RESPONISVENESS
     .video_review_container {
         height: 400px;
     }
+
+
 }
 
 
@@ -4279,6 +4677,41 @@ MEDIA QUERIES FOR RESPONISVENESS
     .to_be_review_product img {
         height: 320px;
     }
+
+    .mySwiperIndividulaProduct {
+        height: 160px;
+        width: auto;
+    }
+
+    .mySwiperIndividulaProduct2 {
+        height: 520px;
+        padding: 10px;
+    }
+
+
+    .mySwiperIndividulaProduct .swiper-wrapper .swiper-slide {
+        width: auto;
+    }
+
+    .mySwiperIndividulaProduct .swiper-button-next {
+        top: 46% !important;
+        left: auto;
+        right: 0;
+        transform: rotate(0deg);
+        bottom: auto;
+    }
+
+    .mySwiperIndividulaProduct .swiper-button-prev {
+        top: 46% !important;
+        transform: rotate(0deg);
+        left: 0%;
+    }
+
+    .mySwiperIndividulaProduct .swiper-button-prev:after,
+    .mySwiperIndividulaProduct .swiper-button-next:after {
+        font-size: 24px !important;
+    }
+
 }
 
 
@@ -4365,11 +4798,13 @@ MEDIA QUERIES FOR RESPONISVENESS
     .to_be_review_product img {
         height: 220px !important;
     }
-    .w_33{
+
+    .w_33 {
         width: 100%;
         border: 0;
     }
-    .track_order_container{
+
+    .track_order_container {
         width: 92%;
         margin: auto;
     }
@@ -4413,5 +4848,10 @@ MEDIA QUERIES FOR RESPONISVENESS
 
     .review_product_card .image {
         width: 150px;
+    }
+
+    .mySwiperIndividulaProduct {
+        height: 90px;
+        width: auto;
     }
 }

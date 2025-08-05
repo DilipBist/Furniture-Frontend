@@ -48,7 +48,7 @@
                         </div>
                         <div class="track_order">
                             <img src="assets/images/icons/tackOrderblack.svg" alt="call icon">
-                            <a href="#">Track an Order</a>
+                            <a href="trace-order.php">Track an Order</a>
                         </div>
                     </div>
                 </div>
