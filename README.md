@@ -6,7 +6,9 @@ A frontend PHP website for **Mega Furniture**, designed to showcase a profession
 
 ## 📸 Preview
 
-![Home Page](screenshots/home.png)  
+![Home Page]
+<img width="1911" height="943" alt="image" src="https://github.com/user-attachments/assets/bf7234b1-8d1f-41b0-96f8-9e681d63a218" />
+
 
 ---
 
